@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>
+    Calculator
+  </title>
+  <link rel="stylesheet" href="./calculator-project.css">
+</head>
+
+<body>
+<p class="js-display-calculation display-calculation"></p>
+
+  <p>
+    <button class="number-button"
+    onclick="
+      calc('1');
+    ">1</button>
+    <button class="number-button"
+    onclick="
+      calc('2');
+    ">2</button>
+    <button class="number-button"
+    onclick="
+      calc('3');
+    ">3</button>
+    <button class="operator-button"
+    onclick="
+      calc(' + ');
+    ">+</button>
+  </p>
+
+  <p>
+    <button class="number-button"
+    onclick="
+      calc('4');     
+    ">4</button>
+    <button class="number-button"
+    onclick="
+      calc('5');     
+    ">5</button>
+    <button class="number-button"
+    onclick="
+      calc('6');     
+    ">6</button>
+    <button class="operator-button"
+    onclick="
+      calc(' - ');
+    ">-</button>
+  </p>
+
+  <p>
+    <button class="number-button"
+    onclick="
+      calc('7');     
+    ">7</button>
+    <button class="number-button"
+    onclick="
+      calc('8');     
+    ">8</button>
+    <button class="number-button"
+    onclick="
+      calc('9');     
+    ">9</button>
+    <button class="operator-button"
+    onclick="
+      calc(' * ');
+    ">*</button>
+  </p>
+
+  <p>
+    <button class="number-button"
+    onclick="
+      calc('0');     
+    ">0</button>
+    <button class="number-button"
+    onclick="
+      calc('.');    
+    ">.</button>
+    <button class="number-button"
+    onclick="
+      result = eval(result) || 0;
+      result = String(result);
+      localStorage.setItem('result', result);
+      showCalculation();
+    ">=</button>
+    <button class="operator-button"
+    onclick="
+      calc(' / ');
+    ">/</button>
+  </p>
+
+  <p>
+    <button class="clear-button" onclick="
+      localStorage.removeItem('result');
+      calculation = '';
+      result = '';
+      calc('');
+    ">Clear</button>
+  </p>
+  <script src="./calculator-project.js">
+  </script>
+</body>
+</html>
